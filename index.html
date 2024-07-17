@@ -1,0 +1,55 @@
+<!DOCTYPE html> 
+<html lang="en"> 
+
+	<head>  
+	</head> 
+
+	<body>
+		<input type="number" id="input1">
+		<input type="number" id="input2">
+		<button onclick="merge()">
+			submit
+		</button>
+		
+		<script>
+		function merge() {
+			var arr1 = document.getElementById('input1').value;
+			var arr2 = document.getElementById('input2').value;
+			var result = [];
+			for (let i = 0; i < arr1.length;i++) {
+				result.push(parseInt(arr1[i] || 0) + parseInt(arr2[i] || 0));
+			}
+		
+			alert(result);
+		}
+			
+		</script>
+	</body> 
+	<!-- 
+		function merge(){	
+			var arr1 = [1,2,3,7,2];
+			var arr2 = [1,2,3,4];
+			var result = [];
+			for (let i = 0; i < arr1.length;i++){
+				if (arr1[i] == "None"){
+					arr1[i] = 0;
+				}
+				if (arr2[i] == null){		
+					arr2[i] = 0;
+				}
+				result.push(arr1[i]+ arr2[i]);
+			}
+			alert(result);
+		}
+		function merge() {
+			var arr1 = [1, 2, 3, 7, 2];
+			var arr2 = [1, 2, 3, 4];
+			var result = [];
+			for (let i = 0; i < arr1.length;i++) {
+				result.push((arr1[i] || 0)+ (arr2[i] || 0));
+			}
+		
+			alert(result);
+		}
+	-->
+</html>
